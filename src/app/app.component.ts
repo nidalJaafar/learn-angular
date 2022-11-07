@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {Server} from "./common/server-interface";
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'learn-angular';
+  serverElements: Server[] = [];
+
+  onElementAdded(element: Server) {
+    this.serverElements.push(element)
+  }
 }
