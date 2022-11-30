@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'learn-angular';
+  tab = 'recipe'
+
+  onSelect(event: string) {
+    this.tab = event
+  }
 }
